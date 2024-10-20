@@ -118,7 +118,7 @@ def create_argparser():
         num_samples=1,
         batch_size=1,
         use_ddim=False,
-        model_path="/mnt/C/susu/cj/model_data/256x256_diffusion_uncond.pt",
+        model_path=256x256_diffusion_uncond.pt",
         b0=0.01,
         T=1/5,
         scale=1.0
