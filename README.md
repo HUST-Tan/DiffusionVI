@@ -6,7 +6,14 @@ Arxiv link: https://arxiv.org/abs/2410.17521
 
 ### Inference
 
-To conduct real-world denoising, first prepare real-world noisy datasets [PolyU, CC and SIDD](https://github.com/csjunxu/PolyU-Real-World-Noisy-Images-Dataset) and  [FMDD](https://github.com/yinhaoz/denoising-fluorescence). Then download pre-trained 256x256 unconditional diffusion model: [256x256_diffusion_uncond.pt](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt). Finally, run the following scripts, and the result will be stored in ./result folder:
+#### Datasets
+To conduct real-world denoising, first prepare real-world noisy datasets [PolyU, CC and SIDD](https://github.com/csjunxu/PolyU-Real-World-Noisy-Images-Dataset) and  [FMDD](https://github.com/yinhaoz/denoising-fluorescence). 
+
+#### Pre-trained models
+Then download pre-trained 256x256 unconditional diffusion model: [256x256_diffusion_uncond.pt](https://openaipublic.blob.core.windows.net/diffusion/jul-2021/256x256_diffusion_uncond.pt). 
+
+#### Infer
+Finally, run the following scripts, and the result will be stored in ./result folder:
 
 ```
 MODEL_FLAGS="--attention_resolutions 32,16,8 --class_cond False --diffusion_steps 1000 --image_size 256 --learn_sigma True --noise_schedule linear --num_channels 256 --num_head_channels 64 --num_res_blocks 2 --resblock_updown True --use_fp16 False --use_scale_shift_norm True"
